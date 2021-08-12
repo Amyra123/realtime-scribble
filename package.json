@@ -1,0 +1,18 @@
+{
+  "name": "video-call-app-nodejs-master",
+  "version": "1.0.0",
+  "description": "A conference call implementation using WebRTC, Socket.io and Node.js. This demo is ideal for not more than 4 devices.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.1.3"
+  }
+}
