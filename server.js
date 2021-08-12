@@ -85,19 +85,19 @@ io.on('connection', function (socket) {
     });
 
     socket.on('message1', function (data) {
-        for (var key in users) {
-            if (socket.id === users[key].socketId) {
-                io.in(key.split(',')[0]).emit('message', {
-                    users: users,
-                    user: key.split(',')[1],
-                    word: word[key.split(',')[0]].word,
-                    guessedWord: data.guessedWord,
-                    room: key.split(',')[0]
-                });
-                console.log(word)
-                break;
-            }
+      for (var key in users) {
+        if (socket.id === users[key].socketId) {
+          io.in(key.split(",")[0]).emit("message", {
+            users: users,
+            user: key.split(",")[1],
+            word: word[key.split(",")[0]].word,
+            guessedWord: data.guessedWord,
+            room: key.split(",")[0],
+          });
+          console.log(word);
+          break;
         }
+      }
     });
 
     // add handler for message type "draw_line".

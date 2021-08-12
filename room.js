@@ -133,12 +133,13 @@ window.addEventListener('load', () => {
             socketId: socketId,
             guessedWord: document.querySelector('.input').value,
         });
-        document.querySelector(".input").value = "";
+        
     });
     socket.on('message', function (data) {
         console.log("word")
         document.querySelector('.message').innerHTML += "<div class='boxer'>" + data.user + "  " + "    :    " + "  " + data.guessedWord + "</div>";
         if (document.querySelector('.input').value === data.word) {
+            
             socket.emit('wordGuessed', { user: data.user, word: data.word, room: data.room })
         }
         chatRoom.scrollTop = chatRoom.scrollHeight;
