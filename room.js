@@ -80,8 +80,8 @@ window.addEventListener('load', () => {
     // get canvas element and create context
     var canvas = document.getElementById('drawing');
     var context = canvas.getContext('2d');
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    var width = window.innerWidth*0.8;
+    var height = window.innerHeight*0.9;
 
     // var width = canvas.width;
     // var height = canvas.height;
